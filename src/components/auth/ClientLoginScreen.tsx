@@ -71,18 +71,18 @@ export const ClientLoginScreen: React.FC<{ onToggleMode: () => void; onSwitchTo:
   };
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-blue-50 to-indigo-100 p-4">
-      <div className="w-full max-w-md bg-white rounded-2xl shadow-xl p-8">
+    <div className="min-h-screen flex items-center justify-center bg-slate-50 p-4">
+      <div className="w-full max-w-md bg-white rounded-lg shadow-sm border border-slate-200 p-8">
         <div className="text-center mb-8">
-          <h1 className="text-3xl font-bold text-gray-900 mb-2">MonColis.express</h1>
-          <p className="text-gray-600">Connexion Client</p>
+          <h1 className="text-3xl font-bold text-slate-900 mb-2">MonColis.express</h1>
+          <p className="text-slate-600">Connexion Client</p>
         </div>
 
         <div className="flex gap-2 mb-6">
           <button
             onClick={() => setMode('email')}
             className={`flex-1 py-2 px-4 rounded-lg font-medium transition-colors ${
-              mode === 'email' ? 'bg-blue-600 text-white' : 'bg-gray-100 text-gray-700'
+              mode === 'email' ? 'bg-slate-900 text-white' : 'bg-slate-100 text-slate-700'
             }`}
           >
             <Mail className="w-4 h-4 inline mr-2" />
@@ -91,7 +91,7 @@ export const ClientLoginScreen: React.FC<{ onToggleMode: () => void; onSwitchTo:
           <button
             onClick={() => setMode('whatsapp')}
             className={`flex-1 py-2 px-4 rounded-lg font-medium transition-colors ${
-              mode === 'whatsapp' ? 'bg-green-600 text-white' : 'bg-gray-100 text-gray-700'
+              mode === 'whatsapp' ? 'bg-slate-900 text-white' : 'bg-slate-100 text-slate-700'
             }`}
           >
             <Phone className="w-4 h-4 inline mr-2" />
@@ -134,7 +134,7 @@ export const ClientLoginScreen: React.FC<{ onToggleMode: () => void; onSwitchTo:
             <button
               type="submit"
               disabled={loading}
-              className="w-full bg-blue-600 text-white py-3 rounded-lg font-medium hover:bg-blue-700 transition-colors disabled:opacity-50"
+              className="w-full bg-slate-900 text-white py-3 rounded-lg font-medium hover:bg-slate-800 transition-colors disabled:opacity-50"
             >
               {loading ? 'Connexion...' : 'Se connecter'}
             </button>
@@ -161,7 +161,7 @@ export const ClientLoginScreen: React.FC<{ onToggleMode: () => void; onSwitchTo:
                 <button
                   onClick={handleSendOTP}
                   disabled={loading}
-                  className="w-full bg-green-600 text-white py-3 rounded-lg font-medium hover:bg-green-700 transition-colors disabled:opacity-50"
+                  className="w-full bg-slate-900 text-white py-3 rounded-lg font-medium hover:bg-slate-800 transition-colors disabled:opacity-50"
                 >
                   {loading ? 'Envoi...' : 'Envoyer le code'}
                 </button>
@@ -184,7 +184,7 @@ export const ClientLoginScreen: React.FC<{ onToggleMode: () => void; onSwitchTo:
                 <button
                   onClick={handleVerifyOTP}
                   disabled={loading || otp.length !== 6}
-                  className="w-full bg-green-600 text-white py-3 rounded-lg font-medium hover:bg-green-700 transition-colors disabled:opacity-50"
+                  className="w-full bg-slate-900 text-white py-3 rounded-lg font-medium hover:bg-slate-800 transition-colors disabled:opacity-50"
                 >
                   {loading ? 'Vérification...' : 'Vérifier'}
                 </button>
@@ -218,17 +218,17 @@ export const ClientLoginScreen: React.FC<{ onToggleMode: () => void; onSwitchTo:
         <div className="mt-6 text-center space-y-2">
           <button
             onClick={onToggleMode}
-            className="text-blue-600 hover:text-blue-700 font-medium"
+            className="text-slate-900 hover:text-slate-700 font-medium"
           >
             Pas encore de compte ? S'inscrire
           </button>
-          <div className="text-sm text-gray-600">
+          <div className="text-sm text-slate-600">
             Vous êtes un{' '}
-            <button onClick={() => onSwitchTo('partner')} className="text-blue-600 hover:underline">
+            <button onClick={() => onSwitchTo('partner')} className="text-slate-900 hover:underline">
               partenaire
             </button>
             {' '}ou{' '}
-            <button onClick={() => onSwitchTo('admin')} className="text-blue-600 hover:underline">
+            <button onClick={() => onSwitchTo('admin')} className="text-slate-900 hover:underline">
               admin
             </button>
             ?
