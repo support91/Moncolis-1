@@ -76,11 +76,11 @@ export const AdminRegisterScreen: React.FC<{ onToggleMode: () => void; onBack: (
   };
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-gray-900 to-gray-800 p-4">
-      <div className="w-full max-w-md bg-gray-800 rounded-2xl shadow-2xl p-8 border border-gray-700">
+    <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-[#1e5631] to-[#0f3319] p-4">
+      <div className="w-full max-w-md bg-[#1a4229] rounded-2xl shadow-2xl p-8 border border-[#2d6f42]">
         <button
           onClick={step === 'code' ? onBack : () => setStep('code')}
-          className="mb-4 flex items-center gap-2 text-gray-400 hover:text-gray-200"
+          className="mb-4 flex items-center gap-2 text-green-200 hover:text-white"
         >
           <ArrowLeft className="w-4 h-4" />
           Retour
@@ -88,10 +88,10 @@ export const AdminRegisterScreen: React.FC<{ onToggleMode: () => void; onBack: (
 
         <div className="text-center mb-8">
           <div className="flex justify-center mb-4">
-            <Shield className="w-16 h-16 text-red-500" />
+            <Shield className="w-16 h-16 text-[#f39c12]" />
           </div>
-          <h1 className="text-3xl font-bold text-white mb-2">Inscription Admin</h1>
-          <p className="text-gray-400">
+          <h1 className="text-3xl font-bold text-white mb-2">MonColis<span className="text-[#f39c12]">.sn</span></h1>
+          <p className="text-green-200">
             {step === 'code' ? 'Entrez votre code d\'invitation' : 'Complétez vos informations'}
           </p>
         </div>
@@ -99,14 +99,14 @@ export const AdminRegisterScreen: React.FC<{ onToggleMode: () => void; onBack: (
         {step === 'code' ? (
           <form onSubmit={handleVerifyCode} className="space-y-4">
             <div>
-              <label className="block text-sm font-medium text-gray-300 mb-2">Code d'invitation</label>
+              <label className="block text-sm font-medium text-green-200 mb-2">Code d'invitation</label>
               <div className="relative">
-                <Key className="absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-500" />
+                <Key className="absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-green-300" />
                 <input
                   type="text"
                   value={invitationCode}
                   onChange={(e) => setInvitationCode(e.target.value.toUpperCase())}
-                  className="w-full pl-10 pr-4 py-2 bg-gray-700 border border-gray-600 text-white rounded-lg focus:ring-2 focus:ring-red-500 focus:border-transparent uppercase"
+                  className="w-full pl-10 pr-4 py-2 bg-[#0f3319] border border-[#2d6f42] text-white rounded-lg focus:ring-2 focus:ring-[#f39c12] focus:border-transparent uppercase"
                   placeholder="ADMIN-MC-2026-XX"
                   required
                 />
@@ -115,14 +115,14 @@ export const AdminRegisterScreen: React.FC<{ onToggleMode: () => void; onBack: (
 
             <button
               type="submit"
-              className="w-full bg-red-600 text-white py-3 rounded-lg font-medium hover:bg-red-700 transition-colors"
+              className="w-full bg-[#f39c12] text-white py-3 rounded-lg font-medium hover:bg-[#e67e22] transition-colors"
             >
               Vérifier le code
             </button>
 
-            <div className="mt-4 p-4 bg-gray-700 rounded-lg">
-              <p className="text-xs text-gray-400 mb-2">Codes valides:</p>
-              <ul className="text-xs text-gray-500 space-y-1">
+            <div className="mt-4 p-4 bg-[#0f3319] rounded-lg border border-[#2d6f42]">
+              <p className="text-xs text-green-200 mb-2">Codes valides:</p>
+              <ul className="text-xs text-green-300 space-y-1">
                 <li>ADMIN-MC-2026-SN (Sénégal)</li>
                 <li>ADMIN-MC-2026-CI (Côte d'Ivoire)</li>
                 <li>SUPER-ADMIN-2026 (Super Admin)</li>
@@ -132,14 +132,14 @@ export const AdminRegisterScreen: React.FC<{ onToggleMode: () => void; onBack: (
         ) : (
           <form onSubmit={handleSubmit} className="space-y-4">
             <div>
-              <label className="block text-sm font-medium text-gray-300 mb-2">Nom complet</label>
+              <label className="block text-sm font-medium text-green-200 mb-2">Nom complet</label>
               <div className="relative">
-                <User className="absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-500" />
+                <User className="absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-green-300" />
                 <input
                   type="text"
                   value={fullName}
                   onChange={(e) => setFullName(e.target.value)}
-                  className="w-full pl-10 pr-4 py-2 bg-gray-700 border border-gray-600 text-white rounded-lg focus:ring-2 focus:ring-red-500 focus:border-transparent"
+                  className="w-full pl-10 pr-4 py-2 bg-[#0f3319] border border-[#2d6f42] text-white rounded-lg focus:ring-2 focus:ring-[#f39c12] focus:border-transparent"
                   placeholder="Mamadou Diallo"
                   required
                 />
@@ -147,14 +147,14 @@ export const AdminRegisterScreen: React.FC<{ onToggleMode: () => void; onBack: (
             </div>
 
             <div>
-              <label className="block text-sm font-medium text-gray-300 mb-2">Email</label>
+              <label className="block text-sm font-medium text-green-200 mb-2">Email</label>
               <div className="relative">
-                <Mail className="absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-500" />
+                <Mail className="absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-green-300" />
                 <input
                   type="email"
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
-                  className="w-full pl-10 pr-4 py-2 bg-gray-700 border border-gray-600 text-white rounded-lg focus:ring-2 focus:ring-red-500 focus:border-transparent"
+                  className="w-full pl-10 pr-4 py-2 bg-[#0f3319] border border-[#2d6f42] text-white rounded-lg focus:ring-2 focus:ring-[#f39c12] focus:border-transparent"
                   placeholder="admin@moncolis.sn"
                   required
                 />
@@ -162,14 +162,14 @@ export const AdminRegisterScreen: React.FC<{ onToggleMode: () => void; onBack: (
             </div>
 
             <div>
-              <label className="block text-sm font-medium text-gray-300 mb-2">Téléphone</label>
+              <label className="block text-sm font-medium text-green-200 mb-2">Téléphone</label>
               <div className="relative">
-                <Phone className="absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-500" />
+                <Phone className="absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-green-300" />
                 <input
                   type="tel"
                   value={phone}
                   onChange={(e) => setPhone(e.target.value)}
-                  className="w-full pl-10 pr-4 py-2 bg-gray-700 border border-gray-600 text-white rounded-lg focus:ring-2 focus:ring-red-500 focus:border-transparent"
+                  className="w-full pl-10 pr-4 py-2 bg-[#0f3319] border border-[#2d6f42] text-white rounded-lg focus:ring-2 focus:ring-[#f39c12] focus:border-transparent"
                   placeholder="+221775207171"
                   required
                 />
@@ -177,32 +177,32 @@ export const AdminRegisterScreen: React.FC<{ onToggleMode: () => void; onBack: (
             </div>
 
             <div>
-              <label className="block text-sm font-medium text-gray-300 mb-2">Mot de passe</label>
+              <label className="block text-sm font-medium text-green-200 mb-2">Mot de passe</label>
               <div className="relative">
-                <Lock className="absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-500" />
+                <Lock className="absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-green-300" />
                 <input
                   type="password"
                   value={password}
                   onChange={(e) => setPassword(e.target.value)}
-                  className="w-full pl-10 pr-4 py-2 bg-gray-700 border border-gray-600 text-white rounded-lg focus:ring-2 focus:ring-red-500 focus:border-transparent"
+                  className="w-full pl-10 pr-4 py-2 bg-[#0f3319] border border-[#2d6f42] text-white rounded-lg focus:ring-2 focus:ring-[#f39c12] focus:border-transparent"
                   placeholder="••••••••"
                   required
                 />
               </div>
-              <p className="text-xs text-gray-500 mt-1">
+              <p className="text-xs text-green-300 mt-1">
                 8+ caractères, 1 majuscule, 1 minuscule, 1 chiffre, 1 spécial
               </p>
             </div>
 
             <div>
-              <label className="block text-sm font-medium text-gray-300 mb-2">Confirmer le mot de passe</label>
+              <label className="block text-sm font-medium text-green-200 mb-2">Confirmer le mot de passe</label>
               <div className="relative">
-                <Lock className="absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-500" />
+                <Lock className="absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-green-300" />
                 <input
                   type="password"
                   value={confirmPassword}
                   onChange={(e) => setConfirmPassword(e.target.value)}
-                  className="w-full pl-10 pr-4 py-2 bg-gray-700 border border-gray-600 text-white rounded-lg focus:ring-2 focus:ring-red-500 focus:border-transparent"
+                  className="w-full pl-10 pr-4 py-2 bg-[#0f3319] border border-[#2d6f42] text-white rounded-lg focus:ring-2 focus:ring-[#f39c12] focus:border-transparent"
                   placeholder="••••••••"
                   required
                 />
@@ -212,7 +212,7 @@ export const AdminRegisterScreen: React.FC<{ onToggleMode: () => void; onBack: (
             <button
               type="submit"
               disabled={loading}
-              className="w-full bg-red-600 text-white py-3 rounded-lg font-medium hover:bg-red-700 transition-colors disabled:opacity-50"
+              className="w-full bg-[#f39c12] text-white py-3 rounded-lg font-medium hover:bg-[#e67e22] transition-colors disabled:opacity-50"
             >
               {loading ? 'Inscription...' : 'Créer le compte'}
             </button>
@@ -222,7 +222,7 @@ export const AdminRegisterScreen: React.FC<{ onToggleMode: () => void; onBack: (
         <div className="mt-6 text-center">
           <button
             onClick={onToggleMode}
-            className="text-red-400 hover:text-red-300 font-medium text-sm"
+            className="text-[#f39c12] hover:text-[#e67e22] font-medium text-sm"
           >
             Déjà un compte ? Se connecter
           </button>

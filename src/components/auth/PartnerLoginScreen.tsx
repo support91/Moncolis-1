@@ -44,7 +44,7 @@ export const PartnerLoginScreen: React.FC<{ onToggleMode: () => void; onBack: ()
         </button>
 
         <div className="text-center mb-8">
-          <h1 className="text-3xl font-bold text-orange-900 mb-2">MonColis.express</h1>
+          <h1 className="text-3xl font-bold text-[#1e5631] mb-2">MonColis<span className="text-[#f39c12]">.sn</span></h1>
           <p className="text-gray-600">Connexion Partenaire</p>
         </div>
 
@@ -57,7 +57,7 @@ export const PartnerLoginScreen: React.FC<{ onToggleMode: () => void; onBack: ()
                 type="email"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
-                className="w-full pl-10 pr-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent"
+                className="w-full pl-10 pr-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#f39c12] focus:border-transparent"
                 placeholder="entreprise@example.com"
                 required
               />
@@ -72,7 +72,7 @@ export const PartnerLoginScreen: React.FC<{ onToggleMode: () => void; onBack: ()
                 type="password"
                 value={password}
                 onChange={(e) => setPassword(e.target.value)}
-                className="w-full pl-10 pr-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent"
+                className="w-full pl-10 pr-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#f39c12] focus:border-transparent"
                 placeholder="••••••••"
                 required
               />
@@ -82,7 +82,7 @@ export const PartnerLoginScreen: React.FC<{ onToggleMode: () => void; onBack: ()
           <button
             type="submit"
             disabled={loading}
-            className="w-full bg-orange-600 text-white py-3 rounded-lg font-medium hover:bg-orange-700 transition-colors disabled:opacity-50"
+            className="w-full bg-[#f39c12] text-white py-3 rounded-lg font-medium hover:bg-[#e67e22] transition-colors disabled:opacity-50"
           >
             {loading ? 'Connexion...' : 'Se connecter'}
           </button>
@@ -106,7 +106,7 @@ export const PartnerLoginScreen: React.FC<{ onToggleMode: () => void; onBack: ()
         <div className="mt-6 text-center">
           <button
             onClick={onToggleMode}
-            className="text-orange-600 hover:text-orange-700 font-medium"
+            className="text-[#f39c12] hover:text-[#e67e22] font-medium"
           >
             Devenir partenaire ? S'inscrire
           </button>

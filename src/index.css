@@ -1,1 +1,26 @@
-@import './styles/index.css';
+@import "tailwindcss";
+
+:root {
+  --moncolis-green: #1e5631;
+  --moncolis-green-light: #2d6f42;
+  --moncolis-orange: #f39c12;
+  --moncolis-orange-dark: #e67e22;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#root {
+  min-height: 100vh;
+}

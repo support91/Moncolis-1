@@ -71,18 +71,18 @@ export const ClientLoginScreen: React.FC<{ onToggleMode: () => void; onSwitchTo:
   };
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-secondary p-4">
-      <div className="w-full max-w-md bg-white rounded-lg shadow-lg border border-border p-8">
+    <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-green-50 to-orange-50 p-4">
+      <div className="w-full max-w-md bg-white rounded-2xl shadow-xl p-8">
         <div className="text-center mb-8">
-          <h1 className="text-3xl font-bold text-foreground mb-2">MonColis.express</h1>
-          <p className="text-muted-foreground">Connexion Client</p>
+          <h1 className="text-3xl font-bold text-[#1e5631] mb-2">MonColis<span className="text-[#f39c12]">.sn</span></h1>
+          <p className="text-gray-600">Connexion Client</p>
         </div>
 
         <div className="flex gap-2 mb-6">
           <button
             onClick={() => setMode('email')}
             className={`flex-1 py-2 px-4 rounded-lg font-medium transition-colors ${
-              mode === 'email' ? 'bg-primary text-primary-foreground' : 'bg-secondary text-secondary-foreground'
+              mode === 'email' ? 'bg-[#1e5631] text-white' : 'bg-gray-100 text-gray-700'
             }`}
           >
             <Mail className="w-4 h-4 inline mr-2" />
@@ -91,7 +91,7 @@ export const ClientLoginScreen: React.FC<{ onToggleMode: () => void; onSwitchTo:
           <button
             onClick={() => setMode('whatsapp')}
             className={`flex-1 py-2 px-4 rounded-lg font-medium transition-colors ${
-              mode === 'whatsapp' ? 'bg-primary text-primary-foreground' : 'bg-secondary text-secondary-foreground'
+              mode === 'whatsapp' ? 'bg-[#25D366] text-white' : 'bg-gray-100 text-gray-700'
             }`}
           >
             <Phone className="w-4 h-4 inline mr-2" />
@@ -109,7 +109,7 @@ export const ClientLoginScreen: React.FC<{ onToggleMode: () => void; onSwitchTo:
                   type="email"
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
-                  className="w-full pl-10 pr-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                  className="w-full pl-10 pr-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#1e5631] focus:border-transparent"
                   placeholder="votre@email.com"
                   required
                 />
@@ -124,7 +124,7 @@ export const ClientLoginScreen: React.FC<{ onToggleMode: () => void; onSwitchTo:
                   type="password"
                   value={password}
                   onChange={(e) => setPassword(e.target.value)}
-                  className="w-full pl-10 pr-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                  className="w-full pl-10 pr-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#1e5631] focus:border-transparent"
                   placeholder="••••••••"
                   required
                 />
@@ -134,7 +134,7 @@ export const ClientLoginScreen: React.FC<{ onToggleMode: () => void; onSwitchTo:
             <button
               type="submit"
               disabled={loading}
-              className="w-full bg-primary text-primary-foreground py-3 rounded-lg font-medium hover:opacity-90 transition-colors disabled:opacity-50"
+              className="w-full bg-[#1e5631] text-white py-3 rounded-lg font-medium hover:bg-[#2d6f42] transition-colors disabled:opacity-50"
             >
               {loading ? 'Connexion...' : 'Se connecter'}
             </button>
@@ -151,7 +151,7 @@ export const ClientLoginScreen: React.FC<{ onToggleMode: () => void; onSwitchTo:
                       type="tel"
                       value={phone}
                       onChange={(e) => setPhone(e.target.value)}
-                      className="w-full pl-10 pr-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent"
+                      className="w-full pl-10 pr-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#25D366] focus:border-transparent"
                       placeholder="+221775207171"
                       required
                     />
@@ -161,7 +161,7 @@ export const ClientLoginScreen: React.FC<{ onToggleMode: () => void; onSwitchTo:
                 <button
                   onClick={handleSendOTP}
                   disabled={loading}
-                  className="w-full bg-primary text-primary-foreground py-3 rounded-lg font-medium hover:opacity-90 transition-colors disabled:opacity-50"
+                  className="w-full bg-[#25D366] text-white py-3 rounded-lg font-medium hover:bg-[#1eaf52] transition-colors disabled:opacity-50"
                 >
                   {loading ? 'Envoi...' : 'Envoyer le code'}
                 </button>
@@ -175,7 +175,7 @@ export const ClientLoginScreen: React.FC<{ onToggleMode: () => void; onSwitchTo:
                     value={otp}
                     onChange={(e) => setOtp(e.target.value)}
                     maxLength={6}
-                    className="w-full px-4 py-2 border border-gray-300 rounded-lg text-center text-2xl tracking-widest focus:ring-2 focus:ring-green-500 focus:border-transparent"
+                    className="w-full px-4 py-2 border border-gray-300 rounded-lg text-center text-2xl tracking-widest focus:ring-2 focus:ring-[#25D366] focus:border-transparent"
                     placeholder="000000"
                     required
                   />
@@ -184,7 +184,7 @@ export const ClientLoginScreen: React.FC<{ onToggleMode: () => void; onSwitchTo:
                 <button
                   onClick={handleVerifyOTP}
                   disabled={loading || otp.length !== 6}
-                  className="w-full bg-primary text-primary-foreground py-3 rounded-lg font-medium hover:opacity-90 transition-colors disabled:opacity-50"
+                  className="w-full bg-[#25D366] text-white py-3 rounded-lg font-medium hover:bg-[#1eaf52] transition-colors disabled:opacity-50"
                 >
                   {loading ? 'Vérification...' : 'Vérifier'}
                 </button>
@@ -218,17 +218,17 @@ export const ClientLoginScreen: React.FC<{ onToggleMode: () => void; onSwitchTo:
         <div className="mt-6 text-center space-y-2">
           <button
             onClick={onToggleMode}
-            className="text-primary hover:opacity-80 font-medium"
+            className="text-[#1e5631] hover:text-[#2d6f42] font-medium"
           >
             Pas encore de compte ? S'inscrire
           </button>
-          <div className="text-sm text-muted-foreground">
+          <div className="text-sm text-gray-600">
             Vous êtes un{' '}
-            <button onClick={() => onSwitchTo('partner')} className="text-primary hover:underline">
+            <button onClick={() => onSwitchTo('partner')} className="text-[#1e5631] hover:underline">
               partenaire
             </button>
             {' '}ou{' '}
-            <button onClick={() => onSwitchTo('admin')} className="text-primary hover:underline">
+            <button onClick={() => onSwitchTo('admin')} className="text-[#1e5631] hover:underline">
               admin
             </button>
             ?

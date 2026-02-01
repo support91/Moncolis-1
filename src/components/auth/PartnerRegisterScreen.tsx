@@ -68,7 +68,7 @@ export const PartnerRegisterScreen: React.FC<{ onToggleMode: () => void; onBack:
         </button>
 
         <div className="text-center mb-8">
-          <h1 className="text-3xl font-bold text-orange-900 mb-2">MonColis.express</h1>
+          <h1 className="text-3xl font-bold text-[#1e5631] mb-2">MonColis<span className="text-[#f39c12]">.sn</span></h1>
           <p className="text-gray-600">Inscription Partenaire</p>
         </div>
 
@@ -81,7 +81,7 @@ export const PartnerRegisterScreen: React.FC<{ onToggleMode: () => void; onBack:
                 type="text"
                 value={fullName}
                 onChange={(e) => setFullName(e.target.value)}
-                className="w-full pl-10 pr-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent"
+                className="w-full pl-10 pr-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#f39c12] focus:border-transparent"
                 placeholder="Mamadou Diallo"
                 required
               />
@@ -96,7 +96,7 @@ export const PartnerRegisterScreen: React.FC<{ onToggleMode: () => void; onBack:
                 type="text"
                 value={companyName}
                 onChange={(e) => setCompanyName(e.target.value)}
-                className="w-full pl-10 pr-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent"
+                className="w-full pl-10 pr-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#f39c12] focus:border-transparent"
                 placeholder="Express Transport SN"
                 required
               />
@@ -111,7 +111,7 @@ export const PartnerRegisterScreen: React.FC<{ onToggleMode: () => void; onBack:
                 type="text"
                 value={companyAddress}
                 onChange={(e) => setCompanyAddress(e.target.value)}
-                className="w-full pl-10 pr-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent"
+                className="w-full pl-10 pr-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#f39c12] focus:border-transparent"
                 placeholder="Dakar, Plateau"
                 required
               />
@@ -126,7 +126,7 @@ export const PartnerRegisterScreen: React.FC<{ onToggleMode: () => void; onBack:
                 type="email"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
-                className="w-full pl-10 pr-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent"
+                className="w-full pl-10 pr-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#f39c12] focus:border-transparent"
                 placeholder="contact@transport.sn"
                 required
               />
@@ -141,7 +141,7 @@ export const PartnerRegisterScreen: React.FC<{ onToggleMode: () => void; onBack:
                 type="tel"
                 value={phone}
                 onChange={(e) => setPhone(e.target.value)}
-                className="w-full pl-10 pr-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent"
+                className="w-full pl-10 pr-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#f39c12] focus:border-transparent"
                 placeholder="+221775207171"
                 required
               />
@@ -156,7 +156,7 @@ export const PartnerRegisterScreen: React.FC<{ onToggleMode: () => void; onBack:
                 type="password"
                 value={password}
                 onChange={(e) => setPassword(e.target.value)}
-                className="w-full pl-10 pr-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent"
+                className="w-full pl-10 pr-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#f39c12] focus:border-transparent"
                 placeholder="••••••••"
                 required
               />
@@ -171,7 +171,7 @@ export const PartnerRegisterScreen: React.FC<{ onToggleMode: () => void; onBack:
                 type="password"
                 value={confirmPassword}
                 onChange={(e) => setConfirmPassword(e.target.value)}
-                className="w-full pl-10 pr-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent"
+                className="w-full pl-10 pr-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#f39c12] focus:border-transparent"
                 placeholder="••••••••"
                 required
               />
@@ -181,7 +181,7 @@ export const PartnerRegisterScreen: React.FC<{ onToggleMode: () => void; onBack:
           <button
             type="submit"
             disabled={loading}
-            className="w-full bg-orange-600 text-white py-3 rounded-lg font-medium hover:bg-orange-700 transition-colors disabled:opacity-50"
+            className="w-full bg-[#f39c12] text-white py-3 rounded-lg font-medium hover:bg-[#e67e22] transition-colors disabled:opacity-50"
           >
             {loading ? 'Inscription...' : 'S\'inscrire'}
           </button>
@@ -205,7 +205,7 @@ export const PartnerRegisterScreen: React.FC<{ onToggleMode: () => void; onBack:
         <div className="mt-6 text-center">
           <button
             onClick={onToggleMode}
-            className="text-orange-600 hover:text-orange-700 font-medium"
+            className="text-[#f39c12] hover:text-[#e67e22] font-medium"
           >
             Déjà partenaire ? Se connecter
           </button>

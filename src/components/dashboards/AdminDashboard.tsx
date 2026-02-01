@@ -106,15 +106,15 @@ export const AdminDashboard: React.FC = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gray-900">
-      <nav className="bg-gray-800 border-b border-gray-700">
+    <div className="min-h-screen bg-[#0f3319]">
+      <nav className="bg-[#1a4229] border-b border-[#2d6f42]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-16">
             <div className="flex items-center gap-3">
-              <Shield className="w-8 h-8 text-red-500" />
+              <Shield className="w-8 h-8 text-[#f39c12]" />
               <div>
-                <h1 className="text-xl font-bold text-white">MonColis.express</h1>
-                <p className="text-xs text-gray-400">Administration</p>
+                <h1 className="text-xl font-bold text-white">MonColis<span className="text-[#f39c12]">.sn</span></h1>
+                <p className="text-xs text-green-200">Administration</p>
               </div>
             </div>
             <div className="flex items-center gap-4">
@@ -122,14 +122,14 @@ export const AdminDashboard: React.FC = () => {
                 <Shield className="w-4 h-4" />
                 <div>
                   <div className="font-medium">{user?.fullName}</div>
-                  <div className="text-xs text-gray-400">
+                  <div className="text-xs text-green-200">
                     {user?.adminLevel === 'super' ? 'Super Admin' : 'Admin'}
                   </div>
                 </div>
               </div>
               <button
                 onClick={handleSignOut}
-                className="flex items-center gap-2 px-4 py-2 text-white hover:bg-gray-700 rounded-lg transition-colors"
+                className="flex items-center gap-2 px-4 py-2 text-white hover:bg-[#2d6f42] rounded-lg transition-colors"
               >
                 <LogOut className="w-4 h-4" />
                 Déconnexion
@@ -142,7 +142,7 @@ export const AdminDashboard: React.FC = () => {
       <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
         <div className="mb-8">
           <h2 className="text-3xl font-bold text-white mb-2">Tableau de bord administrateur</h2>
-          <p className="text-gray-400">Gérez la plateforme MonColis.express</p>
+          <p className="text-green-200">Gérez la plateforme MonColis.sn</p>
         </div>
 
         {stats.pendingPartners > 0 && (
@@ -162,95 +162,95 @@ export const AdminDashboard: React.FC = () => {
         )}
 
         <div className="grid grid-cols-1 md:grid-cols-4 gap-6 mb-8">
-          <div className="bg-gray-800 border border-gray-700 rounded-lg shadow p-6">
+          <div className="bg-[#1a4229] border border-[#2d6f42] rounded-lg shadow p-6">
             <div className="flex items-center justify-between">
               <div>
-                <p className="text-sm text-gray-400">Utilisateurs totaux</p>
+                <p className="text-sm text-green-200">Utilisateurs totaux</p>
                 <p className="text-3xl font-bold text-white">{stats.totalUsers}</p>
               </div>
-              <Users className="w-12 h-12 text-blue-500 opacity-20" />
+              <Users className="w-12 h-12 text-[#1e5631] opacity-20" />
             </div>
           </div>
 
-          <div className="bg-gray-800 border border-gray-700 rounded-lg shadow p-6">
+          <div className="bg-[#1a4229] border border-[#2d6f42] rounded-lg shadow p-6">
             <div className="flex items-center justify-between">
               <div>
-                <p className="text-sm text-gray-400">Clients</p>
-                <p className="text-3xl font-bold text-blue-400">{stats.totalClients}</p>
+                <p className="text-sm text-green-200">Clients</p>
+                <p className="text-3xl font-bold text-[#1e5631]">{stats.totalClients}</p>
               </div>
-              <Users className="w-12 h-12 text-blue-400 opacity-20" />
+              <Users className="w-12 h-12 text-[#1e5631] opacity-20" />
             </div>
           </div>
 
-          <div className="bg-gray-800 border border-gray-700 rounded-lg shadow p-6">
+          <div className="bg-[#1a4229] border border-[#2d6f42] rounded-lg shadow p-6">
             <div className="flex items-center justify-between">
               <div>
-                <p className="text-sm text-gray-400">Partenaires</p>
-                <p className="text-3xl font-bold text-orange-400">{stats.totalPartners}</p>
+                <p className="text-sm text-green-200">Partenaires</p>
+                <p className="text-3xl font-bold text-[#f39c12]">{stats.totalPartners}</p>
               </div>
-              <Truck className="w-12 h-12 text-orange-400 opacity-20" />
+              <Truck className="w-12 h-12 text-[#f39c12] opacity-20" />
             </div>
           </div>
 
-          <div className="bg-gray-800 border border-gray-700 rounded-lg shadow p-6">
+          <div className="bg-[#1a4229] border border-[#2d6f42] rounded-lg shadow p-6">
             <div className="flex items-center justify-between">
               <div>
-                <p className="text-sm text-gray-400">Colis</p>
-                <p className="text-3xl font-bold text-green-400">{stats.totalPackages}</p>
+                <p className="text-sm text-green-200">Colis</p>
+                <p className="text-3xl font-bold text-[#1e5631]">{stats.totalPackages}</p>
               </div>
-              <Package className="w-12 h-12 text-green-400 opacity-20" />
+              <Package className="w-12 h-12 text-[#1e5631] opacity-20" />
             </div>
           </div>
         </div>
 
-        <div className="bg-gray-800 border border-gray-700 rounded-lg shadow">
-          <div className="p-6 border-b border-gray-700">
+        <div className="bg-[#1a4229] border border-[#2d6f42] rounded-lg shadow">
+          <div className="p-6 border-b border-[#2d6f42]">
             <h3 className="text-lg font-semibold text-white">Gestion des utilisateurs</h3>
           </div>
 
           <div className="overflow-x-auto">
             {loading ? (
-              <div className="p-8 text-center text-gray-400">Chargement...</div>
+              <div className="p-8 text-center text-green-200">Chargement...</div>
             ) : users.length === 0 ? (
-              <div className="p-8 text-center text-gray-400">Aucun utilisateur</div>
+              <div className="p-8 text-center text-green-200">Aucun utilisateur</div>
             ) : (
               <table className="w-full">
-                <thead className="bg-gray-750 border-b border-gray-700">
+                <thead className="bg-[#0f3319] border-b border-[#2d6f42]">
                   <tr>
-                    <th className="px-6 py-3 text-left text-xs font-medium text-gray-400 uppercase tracking-wider">
+                    <th className="px-6 py-3 text-left text-xs font-medium text-green-200 uppercase tracking-wider">
                       Nom
                     </th>
-                    <th className="px-6 py-3 text-left text-xs font-medium text-gray-400 uppercase tracking-wider">
+                    <th className="px-6 py-3 text-left text-xs font-medium text-green-200 uppercase tracking-wider">
                       Email
                     </th>
-                    <th className="px-6 py-3 text-left text-xs font-medium text-gray-400 uppercase tracking-wider">
+                    <th className="px-6 py-3 text-left text-xs font-medium text-green-200 uppercase tracking-wider">
                       Type
                     </th>
-                    <th className="px-6 py-3 text-left text-xs font-medium text-gray-400 uppercase tracking-wider">
+                    <th className="px-6 py-3 text-left text-xs font-medium text-green-200 uppercase tracking-wider">
                       Statut
                     </th>
-                    <th className="px-6 py-3 text-left text-xs font-medium text-gray-400 uppercase tracking-wider">
+                    <th className="px-6 py-3 text-left text-xs font-medium text-green-200 uppercase tracking-wider">
                       Date
                     </th>
-                    <th className="px-6 py-3 text-left text-xs font-medium text-gray-400 uppercase tracking-wider">
+                    <th className="px-6 py-3 text-left text-xs font-medium text-green-200 uppercase tracking-wider">
                       Actions
                     </th>
                   </tr>
                 </thead>
-                <tbody className="divide-y divide-gray-700">
+                <tbody className="divide-y divide-[#2d6f42]">
                   {users.map((u) => (
-                    <tr key={u.id} className="hover:bg-gray-750">
+                    <tr key={u.id} className="hover:bg-[#0f3319]">
                       <td className="px-6 py-4 whitespace-nowrap text-sm text-white">
                         {u.full_name}
                       </td>
-                      <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-400">
+                      <td className="px-6 py-4 whitespace-nowrap text-sm text-green-200">
                         {u.email}
                       </td>
                       <td className="px-6 py-4 whitespace-nowrap">
                         <span className={`px-2 py-1 text-xs font-medium rounded-full ${
-                          u.user_type === 'admin' ? 'bg-red-900 text-red-200' :
-                          u.user_type === 'partner' ? 'bg-orange-900 text-orange-200' :
-                          'bg-blue-900 text-blue-200'
+                          u.user_type === 'admin' ? 'bg-[#f39c12] bg-opacity-20 text-[#f39c12]' :
+                          u.user_type === 'partner' ? 'bg-[#f39c12] bg-opacity-20 text-[#f39c12]' :
+                          'bg-[#1e5631] bg-opacity-20 text-[#1e5631]'
                         }`}>
                           {u.user_type}
                         </span>
@@ -258,7 +258,7 @@ export const AdminDashboard: React.FC = () => {
                       <td className="px-6 py-4 whitespace-nowrap">
                         {u.user_type === 'partner' && u.partner_status && (
                           <span className={`px-2 py-1 text-xs font-medium rounded-full ${
-                            u.partner_status === 'approved' ? 'bg-green-900 text-green-200' :
+                            u.partner_status === 'approved' ? 'bg-[#1e5631] bg-opacity-20 text-[#1e5631]' :
                             u.partner_status === 'pending' ? 'bg-yellow-900 text-yellow-200' :
                             'bg-red-900 text-red-200'
                           }`}>
@@ -266,7 +266,7 @@ export const AdminDashboard: React.FC = () => {
                           </span>
                         )}
                       </td>
-                      <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-400">
+                      <td className="px-6 py-4 whitespace-nowrap text-sm text-green-200">
                         {new Date(u.created_at).toLocaleDateString('fr-FR')}
                       </td>
                       <td className="px-6 py-4 whitespace-nowrap text-sm">
@@ -274,7 +274,7 @@ export const AdminDashboard: React.FC = () => {
                           <div className="flex gap-2">
                             <button
                               onClick={() => handleApprovePartner(u.id)}
-                              className="px-3 py-1 bg-green-600 text-white text-xs rounded hover:bg-green-700"
+                              className="px-3 py-1 bg-[#1e5631] text-white text-xs rounded hover:bg-[#2d6f42]"
                             >
                               Approuver
                             </button>

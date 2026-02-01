@@ -72,14 +72,14 @@ export const PartnerDashboard: React.FC = () => {
 
   return (
     <div className="min-h-screen bg-gray-50">
-      <nav className="bg-orange-600 shadow-sm">
+      <nav className="bg-[#f39c12] shadow-sm">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-16">
             <div className="flex items-center gap-3">
               <Truck className="w-8 h-8 text-white" />
               <div>
-                <h1 className="text-xl font-bold text-white">MonColis.express</h1>
-                <p className="text-xs text-orange-100">Espace Partenaire</p>
+                <h1 className="text-xl font-bold text-white">MonColis<span className="text-[#1e5631]">.sn</span></h1>
+                <p className="text-xs text-orange-50">Espace Partenaire</p>
               </div>
             </div>
             <div className="flex items-center gap-4">
@@ -87,12 +87,12 @@ export const PartnerDashboard: React.FC = () => {
                 <User className="w-4 h-4" />
                 <div>
                   <div className="font-medium">{user?.companyName}</div>
-                  <div className="text-xs text-orange-100">{user?.fullName}</div>
+                  <div className="text-xs text-orange-50">{user?.fullName}</div>
                 </div>
               </div>
               <button
                 onClick={handleSignOut}
-                className="flex items-center gap-2 px-4 py-2 text-white hover:bg-orange-700 rounded-lg transition-colors"
+                className="flex items-center gap-2 px-4 py-2 text-white hover:bg-[#e67e22] rounded-lg transition-colors"
               >
                 <LogOut className="w-4 h-4" />
                 Déconnexion
@@ -194,7 +194,7 @@ export const PartnerDashboard: React.FC = () => {
                 <tbody className="bg-white divide-y divide-gray-200">
                   {packages.map((pkg) => (
                     <tr key={pkg.id} className="hover:bg-gray-50">
-                      <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-orange-600">
+                      <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-[#f39c12]">
                         {pkg.tracking_number}
                       </td>
                       <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-900">

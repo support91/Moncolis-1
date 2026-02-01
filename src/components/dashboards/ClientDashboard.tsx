@@ -78,21 +78,21 @@ export const ClientDashboard: React.FC = () => {
 
   return (
     <div className="min-h-screen bg-gray-50">
-      <nav className="bg-white shadow-sm border-b">
+      <nav className="bg-[#1e5631] shadow-sm">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-16">
             <div className="flex items-center gap-3">
-              <Package className="w-8 h-8 text-blue-600" />
-              <h1 className="text-xl font-bold text-gray-900">MonColis.express</h1>
+              <Package className="w-8 h-8 text-[#f39c12]" />
+              <h1 className="text-xl font-bold text-white">MonColis<span className="text-[#f39c12]">.sn</span></h1>
             </div>
             <div className="flex items-center gap-4">
               <div className="flex items-center gap-2 text-sm">
-                <User className="w-4 h-4 text-gray-500" />
-                <span className="text-gray-700">{user?.fullName}</span>
+                <User className="w-4 h-4 text-green-100" />
+                <span className="text-white">{user?.fullName}</span>
               </div>
               <button
                 onClick={handleSignOut}
-                className="flex items-center gap-2 px-4 py-2 text-gray-700 hover:bg-gray-100 rounded-lg transition-colors"
+                className="flex items-center gap-2 px-4 py-2 text-white hover:bg-[#2d6f42] rounded-lg transition-colors"
               >
                 <LogOut className="w-4 h-4" />
                 Déconnexion
@@ -115,7 +115,7 @@ export const ClientDashboard: React.FC = () => {
                 <p className="text-sm text-gray-600">Total des colis</p>
                 <p className="text-3xl font-bold text-gray-900">{packages.length}</p>
               </div>
-              <Package className="w-12 h-12 text-blue-600 opacity-20" />
+              <Package className="w-12 h-12 text-[#1e5631] opacity-20" />
             </div>
           </div>
 
@@ -123,11 +123,11 @@ export const ClientDashboard: React.FC = () => {
             <div className="flex items-center justify-between">
               <div>
                 <p className="text-sm text-gray-600">En transit</p>
-                <p className="text-3xl font-bold text-blue-600">
+                <p className="text-3xl font-bold text-[#f39c12]">
                   {packages.filter(p => p.status === 'in_transit').length}
                 </p>
               </div>
-              <Package className="w-12 h-12 text-blue-600 opacity-20" />
+              <Package className="w-12 h-12 text-[#f39c12] opacity-20" />
             </div>
           </div>
 
@@ -135,11 +135,11 @@ export const ClientDashboard: React.FC = () => {
             <div className="flex items-center justify-between">
               <div>
                 <p className="text-sm text-gray-600">Livrés</p>
-                <p className="text-3xl font-bold text-green-600">
+                <p className="text-3xl font-bold text-[#1e5631]">
                   {packages.filter(p => p.status === 'delivered').length}
                 </p>
               </div>
-              <Package className="w-12 h-12 text-green-600 opacity-20" />
+              <Package className="w-12 h-12 text-[#1e5631] opacity-20" />
             </div>
           </div>
         </div>
@@ -156,10 +156,10 @@ export const ClientDashboard: React.FC = () => {
                     placeholder="Rechercher..."
                     value={searchTerm}
                     onChange={(e) => setSearchTerm(e.target.value)}
-                    className="pl-10 pr-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent w-full sm:w-64"
+                    className="pl-10 pr-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#1e5631] focus:border-transparent w-full sm:w-64"
                   />
                 </div>
-                <button className="flex items-center justify-center gap-2 px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors">
+                <button className="flex items-center justify-center gap-2 px-4 py-2 bg-[#f39c12] text-white rounded-lg hover:bg-[#e67e22] transition-colors">
                   <Plus className="w-4 h-4" />
                   Nouveau colis
                 </button>
@@ -198,7 +198,7 @@ export const ClientDashboard: React.FC = () => {
                 <tbody className="bg-white divide-y divide-gray-200">
                   {filteredPackages.map((pkg) => (
                     <tr key={pkg.id} className="hover:bg-gray-50 cursor-pointer">
-                      <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-blue-600">
+                      <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-[#1e5631]">
                         {pkg.tracking_number}
                       </td>
                       <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-900">
