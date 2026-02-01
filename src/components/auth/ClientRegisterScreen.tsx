@@ -47,23 +47,23 @@ export const ClientRegisterScreen: React.FC<{ onToggleMode: () => void }> = ({ o
   };
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-slate-50 p-4">
-      <div className="w-full max-w-md bg-white rounded-lg shadow-sm border border-slate-200 p-8">
+    <div className="min-h-screen flex items-center justify-center bg-secondary p-4">
+      <div className="w-full max-w-md bg-white rounded-lg shadow-lg border border-border p-8">
         <div className="text-center mb-8">
-          <h1 className="text-3xl font-bold text-slate-900 mb-2">MonColis.express</h1>
-          <p className="text-slate-600">Inscription Client</p>
+          <h1 className="text-3xl font-bold text-foreground mb-2">MonColis.express</h1>
+          <p className="text-muted-foreground">Inscription Client</p>
         </div>
 
         <form onSubmit={handleSubmit} className="space-y-4">
           <div>
-            <label className="block text-sm font-medium text-slate-700 mb-2">Nom complet</label>
+            <label className="block text-sm font-medium text-foreground mb-2">Nom complet</label>
             <div className="relative">
-              <User className="absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-slate-400" />
+              <User className="absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-muted-foreground" />
               <input
                 type="text"
                 value={fullName}
                 onChange={(e) => setFullName(e.target.value)}
-                className="w-full pl-10 pr-4 py-2 border border-slate-300 rounded-lg focus:ring-2 focus:ring-slate-900 focus:border-transparent"
+                className="w-full pl-10 pr-4 py-2 border border-border rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent"
                 placeholder="Mamadou Diallo"
                 required
               />
@@ -71,14 +71,14 @@ export const ClientRegisterScreen: React.FC<{ onToggleMode: () => void }> = ({ o
           </div>
 
           <div>
-            <label className="block text-sm font-medium text-slate-700 mb-2">Email</label>
+            <label className="block text-sm font-medium text-foreground mb-2">Email</label>
             <div className="relative">
-              <Mail className="absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-slate-400" />
+              <Mail className="absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-muted-foreground" />
               <input
                 type="email"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
-                className="w-full pl-10 pr-4 py-2 border border-slate-300 rounded-lg focus:ring-2 focus:ring-slate-900 focus:border-transparent"
+                className="w-full pl-10 pr-4 py-2 border border-border rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent"
                 placeholder="mamadou@example.com"
                 required
               />
@@ -86,14 +86,14 @@ export const ClientRegisterScreen: React.FC<{ onToggleMode: () => void }> = ({ o
           </div>
 
           <div>
-            <label className="block text-sm font-medium text-slate-700 mb-2">Téléphone</label>
+            <label className="block text-sm font-medium text-foreground mb-2">Téléphone</label>
             <div className="relative">
-              <Phone className="absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-slate-400" />
+              <Phone className="absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-muted-foreground" />
               <input
                 type="tel"
                 value={phone}
                 onChange={(e) => setPhone(e.target.value)}
-                className="w-full pl-10 pr-4 py-2 border border-slate-300 rounded-lg focus:ring-2 focus:ring-slate-900 focus:border-transparent"
+                className="w-full pl-10 pr-4 py-2 border border-border rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent"
                 placeholder="+221775207171"
                 required
               />
@@ -101,14 +101,14 @@ export const ClientRegisterScreen: React.FC<{ onToggleMode: () => void }> = ({ o
           </div>
 
           <div>
-            <label className="block text-sm font-medium text-slate-700 mb-2">Mot de passe</label>
+            <label className="block text-sm font-medium text-foreground mb-2">Mot de passe</label>
             <div className="relative">
-              <Lock className="absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-slate-400" />
+              <Lock className="absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-muted-foreground" />
               <input
                 type="password"
                 value={password}
                 onChange={(e) => setPassword(e.target.value)}
-                className="w-full pl-10 pr-4 py-2 border border-slate-300 rounded-lg focus:ring-2 focus:ring-slate-900 focus:border-transparent"
+                className="w-full pl-10 pr-4 py-2 border border-border rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent"
                 placeholder="••••••••"
                 required
               />
@@ -116,14 +116,14 @@ export const ClientRegisterScreen: React.FC<{ onToggleMode: () => void }> = ({ o
           </div>
 
           <div>
-            <label className="block text-sm font-medium text-slate-700 mb-2">Confirmer le mot de passe</label>
+            <label className="block text-sm font-medium text-foreground mb-2">Confirmer le mot de passe</label>
             <div className="relative">
-              <Lock className="absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-slate-400" />
+              <Lock className="absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-muted-foreground" />
               <input
                 type="password"
                 value={confirmPassword}
                 onChange={(e) => setConfirmPassword(e.target.value)}
-                className="w-full pl-10 pr-4 py-2 border border-slate-300 rounded-lg focus:ring-2 focus:ring-slate-900 focus:border-transparent"
+                className="w-full pl-10 pr-4 py-2 border border-border rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent"
                 placeholder="••••••••"
                 required
               />
@@ -133,22 +133,22 @@ export const ClientRegisterScreen: React.FC<{ onToggleMode: () => void }> = ({ o
           <button
             type="submit"
             disabled={loading}
-            className="w-full bg-slate-900 text-white py-3 rounded-lg font-medium hover:bg-slate-800 transition-colors disabled:opacity-50"
+            className="w-full bg-primary text-primary-foreground py-3 rounded-lg font-medium hover:opacity-90 transition-colors disabled:opacity-50"
           >
             {loading ? 'Inscription...' : 'S\'inscrire'}
           </button>
         </form>
 
         <div className="my-6 flex items-center">
-          <div className="flex-1 border-t border-slate-300"></div>
-          <span className="px-4 text-sm text-slate-500">OU</span>
-          <div className="flex-1 border-t border-slate-300"></div>
+          <div className="flex-1 border-t border-border"></div>
+          <span className="px-4 text-sm text-muted-foreground">OU</span>
+          <div className="flex-1 border-t border-border"></div>
         </div>
 
         <button
           onClick={handleGoogleSignup}
           disabled={loading}
-          className="w-full bg-white border border-slate-300 text-slate-700 py-3 rounded-lg font-medium hover:bg-slate-50 transition-colors disabled:opacity-50 flex items-center justify-center gap-2"
+          className="w-full bg-white border border-border text-foreground py-3 rounded-lg font-medium hover:bg-secondary transition-colors disabled:opacity-50 flex items-center justify-center gap-2"
         >
           <Chrome className="w-5 h-5" />
           Continuer avec Google
@@ -157,7 +157,7 @@ export const ClientRegisterScreen: React.FC<{ onToggleMode: () => void }> = ({ o
         <div className="mt-6 text-center">
           <button
             onClick={onToggleMode}
-            className="text-slate-900 hover:text-slate-700 font-medium"
+            className="text-primary hover:opacity-80 font-medium"
           >
             Déjà un compte ? Se connecter
           </button>
